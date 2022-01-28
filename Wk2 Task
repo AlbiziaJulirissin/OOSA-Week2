@@ -1,0 +1,40 @@
+#Task 1
+def sortArray(self,arr):
+    '''Sort an array, using a simple sort method'''
+    # preserve original array by copying
+    copArr=np.copy(self.arr)
+    # create workspace
+    self.sortArr=np.empty(self.arr.shape)
+    # sort the array
+    for i in range(0,copArr.shape[0]):
+      minN,minInd=self.findMin(copArr)
+      self.sortArr[i]=minN
+      copArr[minInd]=1000000
+numb = dataSorter()
+numb.sortArray()
+
+#Task 2
+import matplotlib.pyplot as plt
+def plotArray(self, arr)
+  x_values=numb.sortArray()
+  y_values=numb.sortArray()#define x,y labels
+
+ 
+  
+#Task4
+def binarySearch ( arr, len, x):#arrray, lenth of array, target number 
+    mid = int(arr/2)#find middle
+    if arr[mid] == x: 
+        return mid #compare left
+    elif arr[mid] > x: 
+        return binarySearch(arr, len, x) #compare right
+    else: 
+        return binarySearch(arr, len, x) 
+    
+    X = numb.sortArray(arr)
+    Y = binarySearch(arr, len, x)
+    x_values=numb.sortArray()
+    y_values=numb.sortArray()
+    plt.vlines(199, 100, 0）#set crossing line
+    plt.plot(X,Y)
+    plt.show()
